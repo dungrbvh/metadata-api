@@ -1,0 +1,6 @@
+node_modules
+.env
+yarn-error.log
+access.log
+package-backup.json
+.DS_Store
