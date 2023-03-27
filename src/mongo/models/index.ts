@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const { MONGODB_USER, MONGODB_PASS, MONGODB_CONNECTION_URI, MONGODB_DATABASE } =
   process.env;
 
-const DB_CONNECTION =  `mongodb://${MONGODB_USER}:${MONGODB_PASS}@${MONGODB_CONNECTION_URI}/${MONGODB_DATABASE}`;
+const DB_CONNECTION =  `mongodb+srv://${MONGODB_USER}:${MONGODB_PASS}@${MONGODB_CONNECTION_URI}/${MONGODB_DATABASE}`;
 
 mongoose.Promise = Promise;
 

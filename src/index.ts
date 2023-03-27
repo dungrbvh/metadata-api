@@ -7,12 +7,12 @@ const middleware = require('./middleware');
 const routers = require('./routes');
 
 const app = express()
-const PORT = process.env.port || 8020;
-const API_VERSION = process.env.version || '0.0.0';
+const PORT = process.env.PORT || 8020;
+const API_VERSION = process.env.APP_VERSION || '0.0.0';
 
 const { notFound, errorHandler, stream } = middleware;
 const { authRouter, healthRouter, metadataRouter } = routers;
-
+console.log(process.env);
 app.use(cors());
 app.use(express.json());
 app.use(morgan('combined', { stream }));
